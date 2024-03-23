@@ -34,8 +34,8 @@ public class Ingrediente {
     }
 
     public void sacar(int solicitado){
-        if (cantidad > 0)
-            cantidad = cantidad - solicitado;
+        if (cantidad >= solicitado)
+            cantidad -= solicitado;
         else
             System.out.println("No queda más " + nombre);
     }
