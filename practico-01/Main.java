@@ -1,3 +1,4 @@
+import entity.Despensa;
 import entity.Ingrediente;
 
 public class Main {
@@ -9,5 +10,16 @@ public class Main {
         System.out.println(harina);
         System.out.println(agua);
         System.out.println(levadura);
+
+        // Agregamos ingredientes a la lista
+        Despensa despensa = new Despensa();
+        despensa.addIngrediente(harina);
+        despensa.addIngrediente(agua);
+        despensa.addIngrediente(levadura);
+
+        // Quitamos cierta cantidad de ingredientes
+        despensa.getIngrediente("Harina", 5);
+        despensa.getIngrediente("Agua", 8);
+        despensa.getIngrediente("Levadura", 6);
     }
 }
