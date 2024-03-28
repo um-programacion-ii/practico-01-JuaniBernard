@@ -1,5 +1,8 @@
 import entity.Despensa;
 import entity.Ingrediente;
+import entity.PanCasero;
+import entity.PrePizza;
+import entity.TortitaRaspada;
 
 public class Main {
     public static void main(String[] args) {
@@ -21,5 +24,13 @@ public class Main {
         despensa.getIngrediente("Harina", 5);
         despensa.getIngrediente("Agua", 8);
         despensa.getIngrediente("Levadura", 6);
+
+        // Instanciamos recetas
+        PrePizza prePizza = new PrePizza();
+        System.out.println(prePizza);
+        PanCasero panCasero = new PanCasero();
+        System.out.println(panCasero);
+        TortitaRaspada tortitaRaspada = new TortitaRaspada();
+        System.out.println(tortitaRaspada);
     }
 }
