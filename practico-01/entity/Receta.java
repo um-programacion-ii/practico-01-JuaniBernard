@@ -17,6 +17,14 @@ public class Receta {
         this.preparacion = preparacion;
     }
 
+    public String getPreparacion() {
+        return preparacion;
+    }
+
+    public List<Ingrediente> getIngredientes() {
+        return ingredientesReceta;
+    }
+
     @Override
     public String toString(){
         String result = "\nReceta:\n";

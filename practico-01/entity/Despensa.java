@@ -17,13 +17,20 @@ public class Despensa {
         ingredientes.add(newIngrediente);
     }
 
-    public void getIngrediente(String nombre, int solicitado) {
+    public Ingrediente getIngrediente(String nombre, int solicitado) {
         for (Ingrediente ingrediente: ingredientes) {
             if (ingrediente.getNombre().equals(nombre)) {
-                ingrediente.sacar(solicitado);
-                System.out.println("Update --> Ingrediente: " + ingrediente.nombre + " -- Cantidad " + ingrediente.cantidad);
+                boolean disponible = ingrediente.sacar(solicitado);
+                if (disponible) {
+                    System.out.println("Update --> Ingrediente: " + ingrediente.nombre + " -- Cantidad " + ingrediente.cantidad);
+                    return ingrediente;
+                }
+                else {
+                    return null;
+                }
             }
         }
+        return null;
     }
 
 }

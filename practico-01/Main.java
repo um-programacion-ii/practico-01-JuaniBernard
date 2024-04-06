@@ -1,8 +1,5 @@
-import entity.Despensa;
-import entity.Ingrediente;
-import entity.PanCasero;
-import entity.PrePizza;
-import entity.TortitaRaspada;
+import entity.*;
+import service.CocinaService;
 
 public class Main {
     public static void main(String[] args) {
@@ -32,5 +29,11 @@ public class Main {
         System.out.println(panCasero);
         TortitaRaspada tortitaRaspada = new TortitaRaspada();
         System.out.println(tortitaRaspada);
+
+        // Instanciamos chef y preparamos recetas
+        Chef chef = new Chef("Remy", 3);
+        System.out.println(chef);
+        chef.cocinar(prePizza, despensa);
+        chef.cocinar(tortitaRaspada, despensa);
     }
 }
